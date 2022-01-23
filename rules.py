@@ -5,16 +5,16 @@ import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 '''group是国家分类,category是电影,纪录片,动漫...以后要加上413,禁止MV'''
-def write_rule(uid='0', min_size_torrent=0.01, min_size_adopted=8000, \
-min_num_adopted=100, min_seedingtime = 12.5, \
+def write_rule(uid='0', min_size_torrent=0.001, min_size_adopted=1, \
+min_num_adopted=60, min_seedingtime = 12.5, \
 adoption_number_ratio = '1 1 adoption_number_ratio_function', \
 adoption_size_ratio = '1 1 adoption_size_ratio_function', \
 adoption_bonus_ratio = '1 0.8 0.6 0.3', \
 code_official_group = '1 2 3 4 5 6 7 8 9 10 11 12', \
-code_invalid_category = '', salary_ratio = 1, \
+code_invalid_category = '', salary_ratio = 0.01, \
 size_for_salary_ratio = 1, addedtime_for_salary_ratio = 1, \
 seedingtime_for_salary_ratio = 1, seeders_for_salary_ratio = 1, \
-max_seeders_for_salary = 0, min_size_first_adoption_ratio = 0.5 ,comment = '20220201前高级保种员'):
+max_seeders_for_salary = 0, min_size_first_adoption_ratio = 0.5 ,comment = '20220201前普通保种员'):
 
 	""" Takes uid and optional assessment parameters. Save the
 	customized assessment scheme to database."""
